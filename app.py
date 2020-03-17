@@ -16,11 +16,15 @@ def predict():
     '''
      int_features = [int(x) for x in request.form.values()]
      final_features = [np.array(int_features)]
-#     prediction = model.predict(final_features)
+     prediction = model.predict(final_features)
 
-#     output = prediction[0]
+     output = prediction[0]
+    if(output=='MALE'):
+        output='pramod'
+    else
+        output='nani'
 
-    return render_template('index.html', prediction_text='Gender: {}'.format(final_features))
+    return render_template('index.html', prediction_text='Gender: {}'.format(output))
 
 
 if __name__ == "__main__":

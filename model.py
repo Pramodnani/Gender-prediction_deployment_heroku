@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 # Load  Gender data and  Gender_Prediction data
 # Loading the height & weight data file
-data1 = pd.read_csv('E:\gender_model_deply\weight_height.csv')
+data1 = pd.read_csv('weight_height.csv')
 
 # Converting the index column to list
 indexes = data1.index.values.tolist()
@@ -53,7 +53,7 @@ clf.fit(X,Y)
 
 
 
-model=pickle.dump(clf,open('E:\gender_model_deply\model.pkl','wb'))
+model=pickle.dump(clf,open('model.pkl','wb'))
                   
 model = pickle.load(open('model.pkl','rb'))
 print(model.predict([[175,170]]))

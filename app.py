@@ -19,10 +19,6 @@ def predict():
      prediction = model.predict(final_features)
 
      output = prediction[0]
-    if(output=='MALE'):
-        output='pramod'
-    else
-        output='nani'
 
     return render_template('index.html', prediction_text='Gender: {}'.format(output))
 

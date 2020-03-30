@@ -17,7 +17,7 @@ def predict():
     '''
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    prediction = model.predict([[175,170]])
+    prediction = model.predict(final_features)
     output = prediction[0]
     return render_template('index.html', prediction_text='Gender: {}'.format(output))
 
